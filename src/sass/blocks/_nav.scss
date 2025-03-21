@@ -1,0 +1,165 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white-color;
+
+  & a {
+    color: inherit;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: $white-color;
+  }
+
+  &__list {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      transform-origin: left;
+      transform: scaleX(0);
+      height: 3px;
+      border-radius: 2px;
+      background: transparent;
+      transition: all 0.5s ease;
+    }
+
+    &.active,
+    &:hover,
+    &:active {
+      &::after {
+        content: '';
+        transform: scaleX(0.8);
+        background: $link-hover-elem-color;
+      }
+    }
+  }
+
+  &__login {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    a {
+      font-weight: 500;
+      font-size: 15px;
+
+      &:first-child {
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    z-index: 999;
+  }
+
+  &.nav_mobile {
+    position: fixed;
+    padding: 44px 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    background: linear-gradient(154deg, #428e5f 0%, #112120 100%);
+
+    .nav__logo {
+      align-self: start;
+    }
+
+    .nav__list,
+    .nav__login {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .nav__list {
+      align-items: center;
+    }
+
+    .nav__login {
+      & a:first-child {
+        font-size: 22px;
+      }
+    }
+
+    .nav__link {
+      font-size: 22px;
+
+      &.active {
+        color: $accent-color;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:hover,
+      &.active {
+        color: $accent-color;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_footer {
+    color: $second-color;
+
+    .nav__logo {
+      color: $accent-color;
+    }
+
+    .nav__login a.btn {
+      color: $white-color;
+    }
+
+    .nav__link {
+      &.active,
+      &:hover,
+      &:active {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .nav__link {
+      &.active,
+      &:hover,
+      &:active {
+        color: $main-color;
+      }
+    }
+
+    .nav__login a:first-child:hover {
+      color: $main-color;
+    }
+  }
+}

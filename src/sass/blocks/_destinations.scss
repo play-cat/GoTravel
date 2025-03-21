@@ -1,0 +1,28 @@
+.destinations {
+  margin-top: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    overflow: hidden;
+  }
+
+  &__content {
+    max-width: 456px;
+    flex: 1 0 456px;
+    align-content: center;
+  }
+
+  &__descr {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 25px;
+    color: $second-color;
+  }
+
+  &__carousel {
+    position: relative;
+    // width: 1110px;
+    flex: 1 0 1110px;
+  }
+}

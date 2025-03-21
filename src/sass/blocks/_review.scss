@@ -1,0 +1,53 @@
+.review {
+  display: flex;
+  flex-direction: column;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-top: 35px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__avatar {
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-size: 33px;
+    font-weight: 500;
+  }
+
+  &__geo {
+    font-size: 25px;
+    color: $second-color;
+  }
+
+  &__descr {
+    margin-top: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $second-color;
+  }
+
+  &__rating {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+  }
+}

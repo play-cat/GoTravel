@@ -1,0 +1,38 @@
+body {
+  font-family: $font-stack;
+  color: $main-color;
+  background: #f6f6f6;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $container-width;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+
+  &_right {
+    padding-left: calc(
+      (100% - #{$container-width}) / 2 + #{$container-padding}
+    );
+    padding-right: calc((100% - #{$site-width}) / 2);
+  }
+}
+
+.none {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}

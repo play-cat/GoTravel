@@ -1,0 +1,61 @@
+$time: 0.1s;
+$icon-width: 40px;
+$height: 30px;
+$line-height: 4px;
+$color: #fff;
+
+.menu-icon-wrapper {
+  height: $height;
+  width: $icon-width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: $icon-width;
+  height: $line-height;
+  background-color: $color;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 0;
+
+    width: $icon-width;
+    height: $line-height;
+
+    background-color: $color;
+    transition: transform $time ease-in, top $time linear $time;
+  }
+
+  &::before {
+    top: calc(#{$line-height} * -2);
+  }
+
+  &::after {
+    top: calc(#{$line-height} * 2);
+  }
+
+  &.menu-icon_active {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      top: 0;
+      transition: top $time linear, transform $time ease-in $time;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

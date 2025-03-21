@@ -1,0 +1,21 @@
+.customers {
+  margin-top: 200px;
+
+  &__wrapper {
+    display: flex;
+    gap: 68px;
+  }
+
+  &__img {
+    flex: 0 0 478px;
+
+    img {
+      width: 100%;
+      border-radius: 60px;
+    }
+  }
+
+  &__info {
+    flex: 0 1 560px;
+  }
+}
