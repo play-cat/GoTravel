@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore the natural beauty of Halmahera</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -36,7 +37,7 @@
           </nav>
         </div>
         <div class="header__content-wrapper">
-          <div class="header__content">
+          <div class="header__content" data-aos="fade-right">
             <div class="header__badge">explore the world</div>
             <h1 class="header__title">
               Explore The Natural Beauty Of Halmahera With Us
@@ -47,7 +48,7 @@
             </p>
             <a class="btn btn_header">Explore Now</a>
           </div>
-          <div class="header__img">
+          <div class="header__img" data-aos="fade-left">
             <svg
               class="header__decor"
               viewBox="0 0 48 63"
@@ -89,6 +90,7 @@
                 stroke-linecap="round"
               />
             </svg>
+
             <img src="./img/header/female-tourist.png" alt="female tourist" />
           </div>
         </div>
@@ -160,10 +162,10 @@
       <section class="customers">
         <div class="container">
           <div class="customers__wrapper">
-            <div class="customers__img">
+            <div class="customers__img" data-aos="fade-right">
               <img src="./img/customers/customers.jpg" alt="customer" />
             </div>
-            <div class="customers__info">
+            <div class="customers__info" data-aos="fade-left">
               <h2 class="title title_customers">
                 What do customers say about us?
               </h2>
@@ -222,10 +224,10 @@
                 <circle cx="39.5" cy="36.5" r="8.5" />
               </svg>
             </div>
-            <h2 class="title title_discount">
+            <h2 class="title title_discount" data-aos="fade-down">
               Prepare Yourself And <br />Start Exploring With Us
             </h2>
-            <p class="discount__subtitle">
+            <p class="discount__subtitle" data-aos="fade-down">
               There's the best discount for you today.
             </p>
             <a class="btn btn_discount">get started</a>
@@ -234,11 +236,11 @@
       </section>
       <section class="subscribe">
         <div class="container">
-          <h2 class="title title_subscribe">
+          <h2 class="title title_subscribe" data-aos="fade-up">
             Subscribe <br />To Our Newsletter
           </h2>
 
-          <form class="form form_subscribe">
+          <form class="form form_subscribe" data-aos="zoom-in-up">
             <input type="email" name="email" placeholder="Yourmail@mail.com" />
             <button type="submit" class="btn btn_subscribe">subscribe</button>
           </form>
@@ -247,7 +249,7 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <nav class="nav nav_footer">
+        <nav class="nav nav_footer" data-aos="fade-down">
           <div class="nav__logo">
             <h2><a href="#">GoTrip</a></h2>
           </div>
@@ -274,6 +276,7 @@
         />
       </svg>
     </button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
